@@ -13,9 +13,12 @@
   </head>
   <body>
     <main>
+      <button class="btn theme-btn">Light</button>
+      <button class="btn help-btn">?</button>
+
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
-        <p class="score" id="score--0">43</p>
+        <p class="score" id="score--0">0</p>
         <div class="current">
           <p class="current-label">Current</p>
           <p class="current-score" id="current--0">0</p>
@@ -23,7 +26,7 @@
       </section>
       <section class="player player--1">
         <h2 class="name" id="name--1">Player 2</h2>
-        <p class="score" id="score--1">24</p>
+        <p class="score" id="score--1">0</p>
         <div class="current">
           <p class="current-label">Current</p>
           <p class="current-score" id="current--1">0</p>
@@ -31,9 +34,38 @@
       </section>
 
       <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new ">🔄 New game</button>
+      <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+
+      <div class="target-score">
+        <span class="target-label">Target:</span>
+        <button class="btn target-btn" data-target="50">50</button>
+        <button class="btn target-btn active" data-target="100">100</button>
+        <button class="btn target-btn" data-target="200">200</button>
+      </div>
+
+      <div class="modal hidden">
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <h2>How to Play Greed Dice</h2>
+          <p><strong>Goal:</strong> Be the first player to reach the target score.</p>
+          <p><strong>On your turn:</strong></p>
+          <ul>
+            <li>Roll the dice to add points to your current score.</li>
+            <li>If you roll a <strong>1</strong>, you lose your current score and your turn ends.</li>
+            <li>Press <strong>Hold</strong> to bank your current score and pass the turn.</li>
+          </ul>
+          <p><strong>Controls:</strong></p>
+          <ul>
+            <li><strong>Space</strong> or <strong>D</strong> — Roll dice</li>
+            <li><strong>Enter</strong> or <strong>H</strong> — Hold</li>
+            <li><strong>R</strong> — New game</li>
+            <li><strong>Escape</strong> — Close this modal</li>
+          </ul>
+          <p>Click a player's name to rename them. Choose your target score above.</p>
+        </div>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

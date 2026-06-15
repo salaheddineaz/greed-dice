@@ -24,66 +24,191 @@
   .current {
     width: 80%;
   }
+
+  .target-score {
+    bottom: 2.5rem;
+  }
 }
+
 
 /* Mobile */
 @media (max-width: 768px) {
   body {
-    height: auto;
-    padding: 2rem 0;
+    padding: 0;
   }
 
   main {
-    width: 95%;
-    height: 70vh;
-    padding-top: 9rem;
-    padding-bottom: 18rem;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 5rem 0 0;
+    background-color: rgba(255, 255, 255, 0.12);
   }
 
   .player {
-    flex: 1;
-    padding: 1rem 2rem;
-    height: 100%;
+    padding: 3rem 1.5rem;
+  }
+
+  .player--active {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .player--active .name {
+    color: #ff6b8a;
   }
 
   .name {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
   }
 
   .score {
-    font-size: 5rem;
+    font-size: 5.5rem;
     margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(199, 54, 95, 0.25);
   }
 
   .current {
-    width: 100%;
-    max-width: 250px;
-    position: relative;
-    top: 11%;
+    width: 85%;
+    max-width: 170px;
+    padding: 1.2rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .current-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .current-score {
+    font-size: 2.8rem;
   }
 
   .dice {
-    top: 25%;
-    left: 50%;
-    height: 6rem;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    height: 5.5rem;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
   }
 
   .btn {
-    font-size: 1.4rem;
-    padding: 0.8rem 1.8rem;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.4rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
   }
 
   .btn--new {
-    top: 1.5rem;
+    top: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.85);
   }
 
-  .btn--roll { top: auto;
-    bottom: 12%;
+  .btn--roll {
+    position: fixed;
+    bottom: 16rem;
+    top: auto;
+    z-index: 5;
+    background-color: #c7365f;
+    color: #fff;
+    border: none;
+    padding: 1rem 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 25px rgba(199, 54, 95, 0.4);
   }
 
-  .btn--hold { top: auto;
-    bottom: 2%;
+  .btn--hold {
+    position: fixed;
+    bottom: 7rem;
+    top: auto;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .theme-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+  }
+
+  .help-btn {
+    top: 0.5rem;
+    right: 6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .target-score {
+    top: auto;
+    bottom: 27rem;
+    gap: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .target-label {
+    display: none;
+  }
+
+  .target-btn {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    min-width: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .target-btn.active {
+    background-color: #c7365f;
+    border-color: #c7365f;
+    color: #fff;
+  }
+
+  body.light .theme-btn,
+  body.light .help-btn {
+    background-color: rgba(0, 0, 0, 0.07);
+    color: #555;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  body.light .target-score {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  body.light .target-btn {
+    background-color: rgba(0, 0, 0, 0.06);
+    color: #555;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  body.light .target-btn.active {
+    background-color: #c7365f;
+    color: #fff;
+  }
+
+  body.light .btn--hold {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  body.light .btn--new {
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -93,47 +218,74 @@
     font-size: 56.25%;
   }
 
-  main {
-    height: 75vh;
-  }
-
   .player {
-    padding: 1rem;
-    height: 100%;
+    padding: 2.5rem 1rem;
   }
 
   .name {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .score {
-    font-size: 4rem;
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .current {
-    max-width: 180px;
-    top: 35%;
+    max-width: 140px;
+    padding: 1rem;
+    border-radius: 12px;
+  }
 
+  .current-label {
+    font-size: 1rem;
+  }
+
+  .current-score {
+    font-size: 2.4rem;
   }
 
   .dice {
-    height: 5rem;
-    top: 30%;
-        left: 50%;
-    height: 6rem;
-    transform: translate(-50%, -50%);
+    top: 28%;
+    height: 4.5rem;
   }
 
   .btn {
-    width: 80%;
-    max-width: 260px;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
   }
 
-  .btn--roll { 
-    bottom: 12%;
+  .btn--roll {
+    position: fixed;
+    bottom: 14rem;
+    padding: 0.9rem 2.5rem;
   }
 
   .btn--hold {
-    bottom: 2%;
+    position: fixed;
+    bottom: 6rem;
+  }
+
+  .theme-btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .help-btn {
+    right: 5rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  }
+
+  .target-score {
+    bottom: 23rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .target-btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    min-width: 2.2rem;
   }
 }

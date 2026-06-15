@@ -257,13 +257,13 @@
 
   .btn--roll {
     position: fixed;
-    bottom: 14rem;
+    bottom: 23rem;
     padding: 0.9rem 2.5rem;
   }
 
   .btn--hold {
     position: fixed;
-    bottom: 6rem;
+    bottom: 17rem;
   }
 
   .theme-btn {
@@ -279,7 +279,7 @@
   }
 
   .target-score {
-    bottom: 23rem;
+    bottom: 30rem;
     padding: 0.4rem 1rem;
   }
 

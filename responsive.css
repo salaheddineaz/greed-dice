@@ -256,14 +256,15 @@
   }
 
   .btn--roll {
-    position: fixed;
-    bottom: 23rem;
-    padding: 0.9rem 2.5rem;
+        position: fixed;
+        bottom: 34rem;
+        padding: 0.9rem 4rem;
   }
 
   .btn--hold {
     position: fixed;
-    bottom: 17rem;
+    bottom: 28rem;
+    padding: 0.4rem 2rem;
   }
 
   .theme-btn {
@@ -279,13 +280,13 @@
   }
 
   .target-score {
-    bottom: 30rem;
-    padding: 0.4rem 1rem;
+        bottom: 40rem;
+        padding: 0.4rem 1rem;
   }
 
   .target-btn {
     font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.6rem 1.2rem;
     min-width: 2.2rem;
   }
 }
